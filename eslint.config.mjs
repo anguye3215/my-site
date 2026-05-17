@@ -6,16 +6,18 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
-    plugins: { js },
-    extends: ["js/recommended"],
+    plugins: {
+      react: pluginReact
+    },
+    extends: [
+      js.configs.recommended,
+      pluginReact.configs.flat.recommended
+    ],
     languageOptions: {
-      globals: globals.browser,
+      globals: globals.browser
     },
     rules: {
       "react/react-in-jsx-scope": "off"
     }
-  },
-
-  // React recommended config
-  pluginReact.configs.flat.recommended,
+  }
 ]);
