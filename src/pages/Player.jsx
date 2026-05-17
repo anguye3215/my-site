@@ -45,7 +45,7 @@ export default function Player() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>{username}'s Hiscores</h1>
+      <h1>{username}&apos;s Hiscores</h1>
 
       <SkillGrid skills={data} />
 
